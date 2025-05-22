@@ -1,1 +1,38 @@
+version: 2
 
+updates:
+  # 1. Standard NuGet updates (major, minor, patch) with "needs-review" label for specific files
+  - package-ecosystem: "nuget"
+    directory: "/" # Change if your .csproj files are in a subfolder
+    schedule:
+      interval: "daily" # Closest to Renovate's "at any time"
+    open-pull-requests-limit: 0 # Unlimited, like Renovate
+    # Dependabot does not support fileMatch, so will update all projects in the directory
+    labels:
+      - "needs-review"
+    commit-message:
+      prefix: "deps"
+
+  # 2. Security updates only, with "security" label
+  - package-ecosystem: "nuget"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 0
+    labels:
+      - "security"
+    security-updates-only: true
+    commit-message:
+      prefix: "deps"
+
+  # 3. Lock file maintenance every weekend
+  - package-ecosystem: "nuget"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+    # Dependabot does lockfile maintenance automatically for NuGet, but this entry ensures weekly check
+    labels:
+      - "dependencies"
+    commit-message:
+      prefix: "deps"
