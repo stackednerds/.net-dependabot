@@ -1,0 +1,21 @@
+<Project>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\..\miniprofiler.snk</AssemblyOriginatorKeyFile>
+    <MSBuildWarningsAsMessages>NETSDK1069</MSBuildWarningsAsMessages>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+
+    <DebugSymbols>true</DebugSymbols>
+    <IsPackable>false</IsPackable>
+    <NoWarn>NU5105</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectCapability Include="DynamicDependentFile" />
+    <ProjectCapability Include="DynamicFileNesting" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="All" IncludeAssets="runtime; build; native; contentfiles; analyzers" />
+  </ItemGroup>
+</Project>

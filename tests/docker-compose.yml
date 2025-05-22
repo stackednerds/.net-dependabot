@@ -1,0 +1,29 @@
+version: "3"
+services:
+  mongo:
+    image: mongo:4
+    container_name: mongo
+    ports:
+      - 27017:27017
+  mysql:
+    image: mysql:8
+    container_name: mysql
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test
+  postgres:
+    image: postgres:alpine
+    container_name: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: test
+  redis:
+    image: redis:6-alpine
+    container_name: redis
+    ports:
+      - 6379:6379
