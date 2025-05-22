@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>MiniProfiler.Providers.Sqlite</AssemblyName>
+    <Title>MiniProfiler.Providers.Sqlite</Title>
+    <Description>MiniProfiler: Profiler storage for SQLite</Description>
+    <Authors>Nick Craver</Authors>
+    <PackageTags>SQL;SQLite;$(PackageBaseTags)</PackageTags>
+    <TargetFrameworks>net472;net8.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper.StrongName" Version="2.1.35" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="9.0.0" />
+
+    <ProjectReference Include="..\MiniProfiler.Shared\MiniProfiler.Shared.csproj" />
+  </ItemGroup>
+</Project>
