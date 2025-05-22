@@ -1,7 +1,7 @@
 version: 2
 
 updates:
-  # 1. Standard NuGet updates (major, minor, patch) with "needs-review" label for specific files
+  # 1. Standard NuGet updates (major, minor, patch) with "needs-review" label f or specific files
   - package-ecosystem: "nuget"
     directory: "/" # Change if your .csproj files are in a subfolder
     schedule:
