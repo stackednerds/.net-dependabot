@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>MiniProfiler.EF6</AssemblyName>
+    <RootNamespace>StackExchange.Profiling.Data</RootNamespace>
+    <Title>MiniProfiler for Entity Framework 6</Title>
+    <Description>MiniProfiler: Integration for Entity Framework 6</Description>
+    <Authors>Jarrod Dixon, Yaakov Ellis, Nick Craver</Authors>
+    <PackageTags>Entity Framework;Entity Framework 6;$(PackageBaseTags)</PackageTags>
+    <TargetFrameworks>net472;netstandard2.1</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.5.1" />
+
+    <ProjectReference Include="..\MiniProfiler.Shared\MiniProfiler.Shared.csproj" />
+  </ItemGroup>
+</Project>

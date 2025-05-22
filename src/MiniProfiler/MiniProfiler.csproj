@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>MiniProfiler</AssemblyName>
+    <Title>MiniProfiler</Title>
+    <Description>Lightweight mini-profiler, designed for ASP.NET (including MVC) (non-.NET Core) websites</Description>
+    <Authors>Marc Gravell, Jarrod Dixon, Yaakov Ellis, Nick Craver</Authors>
+    <PackageTags>ASP.NET;SQL;$(PackageBaseTags)</PackageTags>
+    <TargetFrameworks>net472</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+
+    <ProjectReference Include="..\MiniProfiler.Shared\MiniProfiler.Shared.csproj" />
+  </ItemGroup>
+</Project>
