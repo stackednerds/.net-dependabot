@@ -1,7 +1,7 @@
 version: 2
 updates:
   - package-ecosystem: "nuget"
-    directory: "/"  # adjust this if your .csproj is in a subfolder
+    directory: "/" # root for Build.csproj, PackageBuild.csproj
     schedule:
       interval: "weekly"
     open-pull-requests-limit: 40
@@ -10,3 +10,65 @@ updates:
       - "nuget"
     commit-message:
       prefix: "deps"
+
+  - package-ecosystem: "nuget"
+    directory: "/samples/Samples.AspNet"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 40
+
+  - package-ecosystem: "nuget"
+    directory: "/samples/Samples.Console"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 40
+
+  - package-ecosystem: "nuget"
+    directory: "/samples/Samples.ConsoleCore"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 40
+
+  - package-ecosystem: "nuget"
+    directory: "/samples/Samples.Mvc5"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 40
+
+  - package-ecosystem: "nuget"
+    directory: "/src/MiniProfiler.AspNetCore.Mvc"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 40
+
+  - package-ecosystem: "nuget"
+    directory: "/src/MiniProfiler.AspNetCore"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 40
+
+  - package-ecosystem: "nuget"
+    directory: "/src/MiniProfiler.EF6"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 40
+
+  - package-ecosystem: "nuget"
+    directory: "/src/MiniProfiler.EntityFrameworkCore"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 40
+
+  - package-ecosystem: "nuget"
+    directory: "/src/MiniProfiler.Providers.MongoDB"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 40
+
+  - package-ecosystem: "nuget"
+    directory: "/src/MiniProfiler.Providers.MySql"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 40
+
+# Add more entries for any additional .csproj locations you find!
